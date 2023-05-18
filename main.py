@@ -6,14 +6,14 @@ rows = 10
 cols = 10
 
 def generate_grid(rows:int, cols:int):
-    # Fill each grid cell with a random number 1-10 using a nested list comprehension
-    grid = [[random.randint(1, 10) for _ in range(cols)] for _ in range(rows)]
+    # Fill each grid cell randomly with either 0 or 1 using a nested list comprehension
+    grid = [[random.choice([0, 1]) for _ in range(cols)] for _ in range(rows)]
     return grid
 
 def print_grid(grid):
     for row in grid:
         for cell in row:
-            print(f"{cell:2d}", end=" ") # Right-align numbers with each having a width of 2
+            print(f"{cell}", end=" ")
         print()
 
 grid = generate_grid(rows, cols)
