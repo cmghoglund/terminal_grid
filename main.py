@@ -2,11 +2,7 @@
 
 rows = 10
 
-grid = []
-
-for _ in range(rows):
-    row = list(range(1, 11))
-    grid.append(row)
+grid = [list(range(1, 11)) for _ in range(rows)]
 
 for row in grid:
     for cell in row:
